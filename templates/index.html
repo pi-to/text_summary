@@ -2,8 +2,11 @@
 {% extends "base.html" %}
 
 {% block body%}
-<form action="/" method="POST">
-    <textarea name="sentence" cols="200" rows="100"></textarea>
-    <input type="submit" value="Submit">
-</form>
+<div class="input-group"></div>
+    <form action="/" method="POST">
+        <span class="input-group-text">要約したい文章を入力してね</span>
+        <input type="submit" value="Submit">
+        <textarea  name="sentence" class="form-control" aria-label="With textarea" cols="100" rows="50"></textarea>
+    </form>
+</div>
 {% endblock %}
