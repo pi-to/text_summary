@@ -4,8 +4,14 @@
 {% block body%}
 <div class="input-group"></div>
     <form action="/" method="POST">
+        <div class="d-grid gap-2 col-2 mx-auto">
+            <input type="submit" value="要約!" role="button" class="btn btn-primary">
+        </div>
+        <span class="input-group-text">何行に要約したい？</span>
+        <input type="number" name="num" min="1" max="10">行
+        <br>
+        <br>
         <span class="input-group-text">要約したい文章を入力してね</span>
-        <input type="submit" value="Submit">
         <textarea  name="sentence" class="form-control" aria-label="With textarea" cols="100" rows="50"></textarea>
     </form>
 </div>

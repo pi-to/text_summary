@@ -11,7 +11,8 @@ def index():
         return render_template('index.html')
     else:
         sentence = request.form.get("sentence")
-        sentences, debug_info = summarize(sentence, sent_limit=5,
+        num = request.form.get("num")
+        sentences, debug_info = summarize(sentence, sent_limit=int(num),
                                           continuous=True, debug=True)
 
         return render_template("output.html", sentences=sentences)
